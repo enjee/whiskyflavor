@@ -1,3 +1,8 @@
 polygon {
-    fill: CadetBlue
+    fill: #626262
+}
+
+.tt {
+    color: black;
+    opacity: 1;
 }
