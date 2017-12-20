@@ -6,14 +6,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Scotch Whisky Flavor Map">
+    <meta name="author" content="Niels Jan van de Pol">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>D3 v4 example page</title>
+    <title>Scotch Flavor Map</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
     <link href="css/blog.css" rel="stylesheet">
@@ -21,80 +21,47 @@
 
 <body style="">
 
-    <header>
-        <div class="blog-masthead">
-            <div class="container">
-                <nav class="nav">
-                    <a class="nav-link active" href="index.html">Hello world</a>
-                    <a class="nav-link" href="data.html">Doing data</a>
-                    <a class="nav-link" href="drawsvg.html">Drawing SVG</a>
-                    <a class="nav-link" href="drawcanvas.html">Drawing Canvas</a>
-                    <a class="nav-link" href="prefabsvg.html">Using prefab SVG</a>
-                </nav>
-            </div>
+<header>
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="nav">
+                <a class="nav-link active" href="index.html">Scotch Flavor Map</a>
+            </nav>
         </div>
+    </div>
 
-        <div class="blog-header">
-            <div class="container">
-                <h1 class="blog-title">Part 1, starting at the bottom</h1>
-                <p class="lead blog-description">Data visualization is fun.</p>
-            </div>
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Discover the true flavor of Scotch</h1>
+            <p class="lead blog-description">Scotch is delicious</p>
         </div>
-    </header>
+    </div>
+</header>
 
-    <main role="main" class="container">
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
 
-        <div class="row">
-
-            <div class="col-sm-8 blog-main">
-
-                <div class="blog-post">
-                    <h2 class="blog-post-title">Hello World!</h2>
-                    <p class="blog-post-meta">by <a href="http://getbootstrap.com/docs/4.0/examples/blog/#">Heinze</a></p>
-
-                    <p>D3 is, at is core, a Dom manipulation library. Which means you can use it to manipulate any part of your site.</p>
-                    <hr>
-                    <p id="test"></p>
-                    
-                </div>
-                <!-- /.blog-post -->
-
-                <nav class="blog-pagination">
-                    <a class="btn btn-outline-primary disabled" href="#">Older</a>
-                    <a class="btn btn-outline-secondary disabled" href="data.html">Newer</a>
-                </nav>
+                <div id="scmap"></div>
 
             </div>
-            <!-- /.blog-main -->
-
-            <aside class="col-sm-3 ml-sm-auto blog-sidebar">
-                
-            </aside>
-            <!-- /.blog-sidebar -->
-
+            <!-- /.blog-post -->
         </div>
-        <!-- /.row -->
-
-    </main>
-    <!-- /.container -->
-
-    <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </footer>
+        <!-- /.blog-main -->
+    </div>
+    <!-- /.row -->
+</main>
+<!-- /.container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/d3.v4.js"></script>
-    <script>
-        d3.select("#test")
-            .text("This text is generated using D3, look at this flashy color!")
-            .style("color","red");
-    </script>
-    
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="js/d3.v4.js"></script>
+<script src="js/scotch-map.js"></script>
 
 
 </body>
