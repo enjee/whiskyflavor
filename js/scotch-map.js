@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 600 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 800 - margin.left - margin.right,
+    height = 1060 - margin.top - margin.bottom;
 
 var svg = d3.select("#scmap").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -10,8 +10,8 @@ var svg = d3.select("#scmap").append("svg")
         "translate(" + margin.left + "," + margin.top + ")");
 
 
-var x = d3.scaleLinear().range([0, 400]);
-var y = d3.scaleLinear().range([0, 530]);
+var x = d3.scaleLinear().range([0, 640]);
+var y = d3.scaleLinear().range([0, 848]);
 
 x.domain([0, 267]);
 y.domain([0, 354]);
