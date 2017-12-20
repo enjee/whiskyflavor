@@ -10,40 +10,21 @@ var svg = d3.select("#scmap").append("svg")
         "translate(" + margin.left + "," + margin.top + ")");
 
 
-var x = d3.scaleLinear().range([0, 267]);
-var y = d3.scaleLinear().range([354, 0]);
+var x = d3.scaleLinear().range([0, 400]);
+var y = d3.scaleLinear().range([0, 530]);
 
 x.domain([0, 267]);
 y.domain([0, 354]);
 
 
-// Load local scotland.json file into regions
-var regions = undefined;
-var json = (function () {
-    var json = null;
-    $.ajax({
-        'async': false,
-        'global': false,
-        'url': "scotland.json",
-        'dataType': "json",
-        'success': function (data) {
-            regions = data.regions;
-        }
-    });
-    return json;
-})();
 
 
-$.each(regions, function (index, value) {
-    var poly = value.points;
-    console.log(value)
-
+d3.json("scotland.json", function(error, data) {
     svg.selectAll("polygon")
-        .data([poly])
+        .data(data.regions)
         .enter().append("polygon")
         .attr("points",function(d) {
-            return d.map(function(d) {
-                return [x(d.x),y(d.y)].join(",");
-            }).join(" ");
-        });
+            return d.points.map(function(d) { return [x(d.x),y(d.y)].join(","); }).join(" ");})
+        .attr("stroke","black")
+        .attr("stroke-width",2);
 });
