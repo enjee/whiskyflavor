@@ -77,8 +77,8 @@ function scaleMap() {
         d3.select("svg").remove();
     }
     margin = {top: 20, right: 20, bottom: 30, left: 50},
-        width = $(window).width() * 0.667 - margin.left - margin.right,
-        height = $(window).width() * 1.325 * 0.667 - margin.top - margin.bottom;
+        width = $(window).width() * 0.4 - margin.left - margin.right,
+        height = $(window).width() * 1.325 * 0.4 - margin.top - margin.bottom;
 
     svg = d3.select("#scmap").append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -104,7 +104,7 @@ function drawMap() {
             .enter().append("polygon")
             .attr("points", function (d) {
                 return d.points.map(function (d) {
-                    return [x(d.x - 50), y(d.y)].join(",");
+                    return [x(d.x - 50), y(d.y - 50)].join(",");
                 }).join(" ");
             })
             .attr("stroke", "black")
@@ -141,7 +141,7 @@ function drawDistilleries() {
                 return x(d.x - 50);
             })
             .attr('cy', function (d) {
-                return y(d.y);
+                return y(d.y - 50);
             })
             .on('mouseenter', function (d, i) {
                 d3.select(this).style('fill', "#00b300");
@@ -176,13 +176,13 @@ function drawFlavors(flavor) {
             .attr('fill', color)
             .attr('fill-opacity', function(d) {
                 console.log(0.25 * eval("d." + flavor))
-                return 0.5 * eval("d." + flavor);
+                return 0.4 * eval("d." + flavor);
             })
             .attr('cx', function (d) {
                 return x(d.x - 50);
             })
             .attr('cy', function (d) {
-                return y(d.y);
+                return y(d.y - 50);
             })
             .on('mouseenter', function (d, i) {
                 tooltip.style("visibility", "visible");
