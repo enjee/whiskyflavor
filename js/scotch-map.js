@@ -11,18 +11,18 @@ window.onresize = function (event) {
  * Declaration of flavor colors      *
  *************************************/
 const COLORS = {
-    Body: "rgb(0, 0, 102)",
-    Sweetness: "rgb(102, 102, 0)",
-    Smoky: "rgb(102, 102, 153)",
-    Medicinal: "rgb(255, 0, 0)",
-    Tobacco: "rgb(204, 102, 0)",
-    Honey: "rgb(255, 153, 0)",
-    Spicy: "rgb(204, 51, 0)",
-    Winey: "rgb(204, 0, 0)",
-    Nutty: "rgb(102, 51, 0)",
-    Malty: "rgb(153, 153, 102)",
-    Fruity: "rgb(255, 255, 102)",
-    Floral: "rgb(51, 204, 51)"
+    Body: "rgba(0, 0, 102, 0.5)",
+    Sweetness: "rgba(102, 102, 0, 0.5)",
+    Smoky: "rgba(102, 102, 153, 0.5)",
+    Medicinal: "rgba(255, 0, 0, 0.5)",
+    Tobacco: "rgba(204, 102, 0, 0.5)",
+    Honey: "rgba(255, 153, 0, 0.5)",
+    Spicy: "rgba(204, 51, 0, 0.5)",
+    Winey: "rgba(204, 0, 0, 0.5)",
+    Nutty: "rgba(102, 51, 0, 0.5)",
+    Malty: "rgba(153, 153, 102, 0.5)",
+    Fruity: "rgba(255, 255, 102, 0.5)",
+    Floral: "rgba(51, 204, 51)"
 };
 
 var activeFlavors = [];
@@ -104,7 +104,7 @@ function drawMap() {
             .enter().append("polygon")
             .attr("points", function (d) {
                 return d.points.map(function (d) {
-                    return [x(d.x - 50), y(d.y - 50)].join(",");
+                    return [x(d.x *0.7 - 120), y(d.y * 0.9 - 50)].join(",");
                 }).join(" ");
             })
             .attr("stroke", "black")
@@ -136,9 +136,9 @@ function drawDistilleries() {
             .attr('r', 5)
             .attr("stroke", "black")
             .attr("stroke-width", 2)
-            .attr('fill', '#626262')
+            .attr('fill', '#804000')
             .attr('cx', function (d) {
-                return x(d.x - 50);
+                return x(d.x);
             })
             .attr('cy', function (d) {
                 return y(d.y - 50);
@@ -158,7 +158,9 @@ function drawDistilleries() {
     });
 }
 
-
+/***********************************
+ * Finally draw in the flavors -.- *
+ ***********************************/
 function drawFlavors(flavor) {
     var color = eval("COLORS." + flavor);
 
@@ -175,11 +177,10 @@ function drawFlavors(flavor) {
             .attr("stroke-width", 2)
             .attr('fill', color)
             .attr('fill-opacity', function(d) {
-                console.log(0.25 * eval("d." + flavor))
                 return 0.4 * eval("d." + flavor);
             })
             .attr('cx', function (d) {
-                return x(d.x - 50);
+                return x(d.x);
             })
             .attr('cy', function (d) {
                 return y(d.y - 50);

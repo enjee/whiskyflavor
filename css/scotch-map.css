@@ -79,8 +79,7 @@ main {
 }
 
 body {
-
-    background-color: #02BEC4;
+    background-color: #cce6ff;
 }
 
 circle {
@@ -88,13 +87,14 @@ circle {
 }
 
 .blog-header {
-    background-color: #0284A8;
-    color: #E1F7E7;
-    font-family: Lato;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-    padding: 0px;
-    margin: 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25), 0 2px 2px rgba(0,0,0,0.22);
+    background: #ffffff !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #003366 0%, #00264d 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #003366 0%,#00264d 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #003366 0%,#00264d 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003366', endColorstr='#00264d',GradientType=0 ); /* IE6-9 */
+    color: white !important;
+    text-shadow: 4px 4px 4px #00264d;
     cursor: default !important;
 }
 
@@ -103,21 +103,26 @@ circle {
 }
 
 .blog-masthead {
-    background-color: #02547D;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 1px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: 0;
+    background: #ffffff !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #00264d 0%, #003366 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #00264d 0%,#003366 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #00264d 0%,#003366 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00264d', endColorstr='#003366',GradientType=0 ); /* IE6-9 */
+    color: white !important;
+    text-shadow: 4px 4px 4px #00264d;
 }
 body > header > div.blog-masthead > div > nav > a {
-    color: #E1F7E7;
-    font-family: Lato;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-    padding: 20px;
-    background-color: #0284A8;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: rgba(0,0,0,0);
+    color: white !important;
+    text-shadow: 4px 4px 4px #00264d;
 }
 
+body > header > div.blog-masthead > div > nav > a:hover {
+    background-color: rgba(255,255,255,0.4);
+    color: white !important;
+    text-shadow: 4px 4px 4px #00264d;
+}
 
 .container {
     pagging: 0;
@@ -134,4 +139,12 @@ label.container {
     font-size: 26px;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
     margin-top: 100px;
+}
+
+.centroid {
+    color: black!important;
+}
+
+.aboot {
+    cursor: default !important;
 }

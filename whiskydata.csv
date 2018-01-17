@@ -2,7 +2,7 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 01,Aberfeldy,2,2,2,0,0,2,1,2,2,2,2,2, 	PH15 2EB, 195,211
 02,Aberlour,3,3,1,0,0,4,3,2,2,3,3,2, 	AB38 9PJ, 203,149
 03,AnCnoc,1,3,2,0,0,2,0,0,2,2,3,2, 	AB5 5LI, 223,156
-04,Ardbeg,4,1,4,4,0,0,2,0,1,2,1,0, 	PA42 7EB, 69,227
+04,Ardbeg,4,1,4,4,0,0,2,0,1,2,1,0, 	PA42 7EB, 50,263
 05,Ardmore,2,2,2,0,0,1,1,1,2,3,1,1, 	AB54 4NH, 221,178
 06,ArranIsleOf,2,3,1,1,0,1,1,1,0,1,1,2, KA27 8HJ, 104,227
 07,Auchentoshan,0,2,0,0,0,1,1,0,2,2,3,3, G81 4SJ, 149,267
@@ -14,13 +14,13 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 13,BenNevis,4,2,2,0,0,2,2,0,2,2,2,2, 	PH33 6TJ, 127,187
 14,Benriach,2,2,1,0,0,2,2,0,0,2,3,2, 	IV30 8SJ, 198,147
 15,Benrinnes,3,2,2,0,0,3,1,1,2,3,2,2, 	AB38 9NN, 197,153
-16,Benromach,2,2,2,0,0,2,2,1,2,2,2,2, 	IV36 3EB, 185,142
+16,Benromach,2,2,2,0,0,2,2,1,2,2,2,2, 	IV36 3EB, 185,143
 17,Bladnoch,1,2,1,0,0,0,1,1,0,2,2,3, 	DG8 9AB, 129,347
 18,BlairAthol,2,2,2,0,0,1,2,2,2,2,2,2, 	PH16 5LY, 171,215
 19,Bowmore,2,2,3,1,0,2,2,1,1,1,1,2, 	PA43 7GS, 61,269
-20,Bruichladdich,1,1,2,2,0,2,2,1,2,2,2,2, PA49 7UN, 56,270
-21,Bunnahabhain,1,2,1,1,0,1,1,1,1,2,2,3, PA46 7RR, 69,262
-22,Caol Ila,3,1,4,2,1,0,2,0,2,1,1,1, 	PA46 7RL, 70,263
+20,Bruichladdich,1,1,2,2,0,2,2,1,2,2,2,2, PA49 7UN, 45,270
+21,Bunnahabhain,1,2,1,1,0,1,1,1,1,2,2,3, PA46 7RR, 55,262
+22,Caol Ila,3,1,4,2,1,0,2,0,2,1,1,1, 	PA46 7RL, 63,275
 23,Cardhu,1,3,1,0,0,1,1,0,2,2,2,2, 	AB38 7RY, 196,154
 24,Clynelish,3,2,3,3,1,0,2,0,1,1,2,0, 	KW9 6LB, 181,110
 25,Craigellachie,2,2,2,0,1,2,2,1,2,2,1,4, AB38 9ST, 196,148
@@ -36,9 +36,9 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 35,GlenGarioch,2,1,3,0,0,0,3,1,0,2,2,2, AB51 0ES, 243,167
 36,GlenGrant,1,2,0,0,0,1,0,1,2,1,2,1, AB38 7BS, 203,153
 37,GlenKeith,2,3,1,0,0,1,2,1,2,1,2,1, AB55 3BU, 212,151
-38,GlenMoray,1,2,1,0,0,1,2,1,2,2,2,4, IV30 1YE, 204,141
+38,GlenMoray,1,2,1,0,0,1,2,1,2,2,2,4, IV30 1YE, 204,142
 39,GlenOrd,3,2,1,0,0,1,2,1,1,2,2,2, IV6 7UJ, 158,145
-40,GlenScotia,2,2,2,2,0,1,0,1,2,2,1,1, PA28 6DS, 108,288
+40,GlenScotia,2,2,2,2,0,1,0,1,2,2,1,1, PA28 6DS, 117,288
 41,GlenSpey,1,3,1,0,0,0,1,1,1,2,0,2, AB38 7AU, 201,149
 42,Glenallachie,1,3,1,0,0,1,1,0,1,2,2,2, AB38 9LR, 201,149
 43,Glendronach,4,2,2,0,0,2,1,4,2,2,2,0, AB54 6DA, 218,163
@@ -49,7 +49,7 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 48,Glenkinchie,1,2,1,0,0,1,2,0,0,2,2,2, EH34 5ET, 204,274
 49,Glenlivet,2,3,1,0,0,2,2,2,1,2,2,3, AB37 9DB, 194,163
 50,Glenlossie,1,2,1,0,0,1,2,0,1,2,2,2, IV30 3SS, 203,144
-51,Glenmorangie,2,2,1,1,0,1,2,0,2,1,2,2, IV19 1PZ, 174,123
+51,Glenmorangie,2,2,1,1,0,1,2,0,2,1,2,2, IV19 1PZ, 165,123
 52,Glenrothes,2,3,1,0,0,1,1,2,1,2,2,0, AB38 7AA, 198,150
 53,Glenturret,2,3,1,0,0,2,2,2,2,2,1,2, PH7 4HA, 172,231
 54,Highland Park,2,2,3,1,0,2,1,1,1,2,1,1, KW15 1SU, 230,40
@@ -57,17 +57,17 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 56,Isle of Jura,2,1,2,2,0,1,1,0,2,1,1,1, PA60 7XT, 79,259
 57,Knochkando,2,3,1,0,0,2,2,1,2,1,2,2, AB38 7RT, 199,251
 58,Lagavulin,4,1,4,4,1,0,1,2,1,1,1,0, PA42 7DZ, 65,279
-59,Laphroiag,4,2,4,4,1,0,0,1,1,1,0,0, PA42 7DU, 64,280
-60,Linkwood,2,3,1,0,0,1,1,2,0,1,3,2, IV30 3RD, 203,140
+59,Laphroiag,4,2,4,4,1,0,0,1,1,1,0,0, PA42 7DU, 54,280
+60,Linkwood,2,3,1,0,0,1,1,2,0,1,3,2, IV30 3RD, 203,143
 61,Loch Lomond,1,1,1,1,0,1,1,0,1,2,1,2, G83 0TL, 154,265
 62,Longmorn,3,2,1,0,0,1,1,1,3,3,2,3, IV30 3SJ, 204,145
 63,Macallan,4,3,1,0,0,2,1,4,2,2,3,1, AB38 9RX, 202,151
 64,Mannochmore,2,1,1,0,0,1,1,1,2,1,2,2, IV30 3SS, 194,144
-65,Miltonduff,2,4,1,0,0,1,0,0,2,1,1,2, IV30 3TQ, 203,140
+65,Miltonduff,2,4,1,0,0,1,0,0,2,1,1,2, IV30 3TQ, 203,145
 66,Mortlach,3,2,2,0,0,2,3,3,2,1,2,2, AB55 4AQ, 209,156
 67,Oban,2,2,2,2,0,0,2,0,2,2,2,0, PA34 5NH, 108,224
 68,OldFettercairn,1,2,2,0,1,2,2,1,2,3,1,1, AB30 1YE, 228,197
-69,OldPulteney,2,1,2,2,1,0,1,1,2,2,2,2, KW1 5BA, 216,80
+69,OldPulteney,2,1,2,2,1,0,1,1,2,2,2,2, KW1 5BA, 213,80
 70,RoyalBrackla,2,3,2,1,1,1,2,1,0,2,3,2, IV12 5QY, 165,150
 71,RoyalLochnagar,3,2,2,0,0,2,2,2,2,2,3,1, AB35 5TB, 203,193
 72,Scapa,2,2,1,1,0,2,1,1,2,2,2,2, KW15 1SE, 225,47
@@ -76,12 +76,12 @@ RowID,Distillery,Body,Sweetness,Smoky,Medicinal,Tobacco,Honey,Spicy,Winey,Nutty,
 75,Springbank,2,2,2,2,0,2,2,1,2,1,0,1, PA28 6EJ, 83,298
 76,Strathisla,2,2,1,0,0,2,2,2,3,3,3,2, AB55 3BS, 210,149
 77,Strathmill,2,3,1,0,0,0,2,0,2,1,3,2, AB55 5DQ,210,149
-78,Talisker,4,2,3,3,0,1,3,0,1,2,2,0, IV47 8SR, 77,219
+78,Talisker,4,2,3,3,0,1,3,0,1,2,2,0, IV47 8SR, 77,140
 79,Tamdhu,1,2,1,0,0,2,0,1,1,2,2,2, AB38 7RP, 198,153
 80,Tomnavulin,1,3,2,0,0,0,2,0,2,1,2,3, AB37 9JA, 205,163
 81,Teaninich,2,2,2,1,0,0,2,0,0,0,2,2, IV17 0XB, 165,132
-82,Tobermory,1,1,1,0,0,1,0,0,1,2,2,2, PA75 6NR, 81,208
+82,Tobermory,1,1,1,0,0,1,0,0,1,2,2,2, PA75 6NR, 79,213
 83,Tomatin,2,3,2,0,0,2,2,1,1,2,0,1, IV13 7YT, 163,163
 84,Tomintoul,0,3,1,0,0,2,2,1,1,2,1,2, AB37 9AQ, 201,152
-85,Tormore,2,2,1,0,0,1,0,1,2,1,0,0, PH26 3LR, 201,151
+85,Tormore,2,2,1,0,0,1,0,1,2,1,0,0, PH26 3LR, 199,156
 86,Tullibardine,2,3,0,0,1,0,2,1,1,2,2,1, PH4 1QG, 180,250
