@@ -98,7 +98,7 @@ function scaleMap() {
 
 // Setup the map and regions
 function drawMap() {
-    d3.json("scotland.json", function (error, data) {
+    d3.json("data/scotland.json", function (error, data) {
         svg.selectAll("polygon")
             .data(data.regions)
             .enter().append("polygon")
@@ -127,7 +127,7 @@ function drawMap() {
 
 // Read in distilleries
 function drawDistilleries() {
-    d3.csv("whiskydata.csv", function (data) {
+    d3.csv("data/whiskydata.csv", function (data) {
         svg.selectAll("circle")
             .data(data)
             .enter()
@@ -165,7 +165,7 @@ function drawDistilleries() {
 function drawFlavors(flavor) {
     var color = eval("COLORS." + flavor);
 
-    d3.csv("whiskydata.csv", function (data) {
+    d3.csv("data/whiskydata.csv", function (data) {
         svg.selectAll(flavor)
             .data(data)
             .enter()

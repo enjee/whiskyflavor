@@ -20,6 +20,7 @@ polygon {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #735850;
 }
 
 /* Hide the browser's default checkbox */
@@ -28,9 +29,6 @@ polygon {
     opacity: 0;
 }
 
-.container {
-    color: #735850;
-}
 
 /* Create a custom checkbox */
 .checkmark {
@@ -102,6 +100,7 @@ circle {
 
 .blog-title {
     cursor: default !important;
+    color: #BFB7B4;
 }
 
 .blog-masthead {
@@ -111,7 +110,6 @@ circle {
     background: -webkit-linear-gradient(top, #545c80 0%, #434c73 100%) !important; /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #545c80 0%, #434c73 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#545c80', endColorstr='#434c73', GradientType=0); /* IE6-9 */
-    color: white !important;
     text-shadow: 4px 4px 4px #BFB7B4;
 }
 
@@ -122,14 +120,13 @@ circle {
     background: -webkit-linear-gradient(top, #434c73 0%, #41496A 100%) !important; /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, #434c73 0%, #41496A 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#434c73', endColorstr='#41496A', GradientType=0); /* IE6-9 */
-    color: white !important;
-    text-shadow: 0.5px 0.5px 0.5px #BFB7B4;
+    text-shadow: 0.5px 0.5px 0.5px #636B8C;
     cursor: default !important;
 }
 
 body > header > div.blog-masthead > div > nav > a {
     background-color: rgba(0, 0, 0, 0);
-    color: white !important;
+    color: #BFB7B4 !important;
     text-shadow: 4px 4px 4px #41496A;
 }
 
@@ -166,4 +163,34 @@ label.container {
 
 .checkboxes {
     padding-top: 50px;
+}
+
+.card {
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+    background: #ffffff !important; /* Old browsers */
+    background: -moz-linear-gradient(top, #434c73 0%, #41496A 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #434c73 0%, #41496A 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #434c73 0%, #41496A 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#434c73', endColorstr='#41496A', GradientType=0); /* IE6-9 */
+    cursor: default !important;
+}
+
+.card-body a {
+    color: white;
+    text-decoration: none;
+}
+
+.card-body a:hover {
+    color: #A0CA79;
+    text-decoration: none;
+}
+
+.centroid a {
+    color: white;
+    text-decoration: none;
+}
+
+.centroid a:hover {
+    color: #A0CA79;
+    text-decoration: none;
 }
