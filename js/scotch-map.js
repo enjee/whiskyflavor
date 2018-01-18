@@ -116,6 +116,7 @@ function drawMap() {
             })
             .on('mousemove', function (d, i) {
                 tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
+
             })
             .on('mouseleave', function (d, i) {
                 d3.select(this).style('fill', "#626262");
@@ -197,3 +198,8 @@ function drawFlavors(flavor) {
             });
     });
 }
+
+$('body').mousemove(function() {
+    drawDistilleries();
+    console.log("Drew distilleries");
+});
