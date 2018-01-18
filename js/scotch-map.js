@@ -1,3 +1,5 @@
+
+// (re)draw everything when page is loaded or resized
 $(document).ready(function () {
     drawEverything();
 });

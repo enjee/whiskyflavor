@@ -1,14 +1,8 @@
-polygon {
-    fill: #735850
-}
+/*******************************************
+* Checkboxes with different flavors markup *
+********************************************/
 
-.tt {
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    opacity: 1;
-}
-
-/* CHECKBOX MARKUP */
+/* Checkbox container */
 .container {
     display: block;
     position: relative;
@@ -29,6 +23,10 @@ polygon {
     opacity: 0;
 }
 
+.container {
+    pagging: 0;
+    margin: 0;
+}
 
 /* Create a custom checkbox */
 .checkmark {
@@ -39,7 +37,6 @@ polygon {
     width: 34px;
     background-color: #eee;
 }
-
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
@@ -71,12 +68,40 @@ polygon {
     transform: rotate(45deg);
 }
 
+.checkboxes {
+    padding-top: 50px;
+}
+
+/*************
+* SVG Markup *
+**************/
+
+/* The drawn land on the map */
+polygon {
+    fill: #735850
+}
+
+/* Tooltip when hovering land or distilleries */
+.tt {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    opacity: 1;
+}
+
+/* The blend mode of flavours (realisticly blend colors) */
+circle {
+    mix-blend-mode: screen;
+}
+
 main {
     padding: 0 !important;
     margin: 0 !important;
     max-width: 100% !important;
 }
 
+/***********************************
+* Background, body and main styles *
+************************************/
 body {
     background: #BFB7B4;
     overflow-x: hidden;
@@ -84,20 +109,45 @@ body {
 
 .waves {
     z-index: -1000;
-    position:fixed;
-    padding:0;
-    margin:0;
-    top:0;
-    left:0;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: repeating-linear-gradient(75deg, #c4bcb9, #bfb7b4 4px, #bdb5b2 16px, #b7afac 30px);
 }
 
-circle {
-    mix-blend-mode: screen;
+label.container {
+    margin-bottom: 5px;
 }
 
+.centroid {
+    color: black !important;
+}
+
+.card-body, .centroid a {
+    color: white;
+    text-decoration: none;
+}
+
+.card-body:hover, .centroid a:hover {
+    color: #A0CA79;
+    text-decoration: none;
+}
+
+.aboot {
+    cursor: default !important;
+}
+
+.img-fluid {
+    height: 26vw !important;
+}
+
+/*******************************
+* Styling of NAV and title bar *
+********************************/
 .blog-title {
     cursor: default !important;
     color: #BFB7B4;
@@ -136,35 +186,9 @@ body > header > div.blog-masthead > div > nav > a:hover {
     text-shadow: 4px 4px 4px #41496A;
 }
 
-.container {
-    pagging: 0;
-    margin: 0;
-}
-
-label.container {
-    margin-bottom: 5px;
-}
-
-.btn-git {
-    color: #E1F7E7;
-    font-family: Lato;
-    font-size: 26px;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
-    margin-top: 100px;
-}
-
-.centroid {
-    color: black !important;
-}
-
-.aboot {
-    cursor: default !important;
-}
-
-.checkboxes {
-    padding-top: 50px;
-}
-
+/***************
+ * Card markup *
+ ***************/
 .card {
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
     background: #ffffff !important; /* Old browsers */
@@ -181,16 +205,6 @@ label.container {
 }
 
 .card-body a:hover {
-    color: #A0CA79;
-    text-decoration: none;
-}
-
-.centroid a {
-    color: white;
-    text-decoration: none;
-}
-
-.centroid a:hover {
     color: #A0CA79;
     text-decoration: none;
 }
