@@ -65,10 +65,6 @@ var tooltip = d3.select("body")
 function drawEverything() {
     scaleMap();
     drawMap();
-    drawDistilleries();
-    $.each(activeFlavors, function (index, flavor) {
-        drawFlavors(flavor);
-    });
 }
 
 // Make sure the map fits on the screen
@@ -121,6 +117,10 @@ function drawMap() {
                 d3.select(this).style('fill', "#626262");
                 tooltip.style("visibility", "hidden");
             });
+    });
+    drawDistilleries();
+    $.each(activeFlavors, function (index, flavor) {
+        drawFlavors(flavor);
     });
 }
 
