@@ -116,7 +116,6 @@ function drawMap() {
             })
             .on('mousemove', function (d, i) {
                 tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
-
             })
             .on('mouseleave', function (d, i) {
                 d3.select(this).style('fill', "#626262");
@@ -138,6 +137,7 @@ function drawDistilleries() {
             .attr("stroke", "black")
             .attr("stroke-width", 2)
             .attr('fill', '#804000')
+            .attr('z-index', '5000')
             .attr('cx', function (d) {
                 return x(d.x);
             })
@@ -170,6 +170,7 @@ function drawFlavors(flavor) {
             .data(data)
             .enter()
             .append('circle')
+            .attr('z-index', '5000')
             .attr('class', flavor)
             .attr('r', function(d) {
                 return 10 * eval("d." + flavor);
@@ -198,8 +199,3 @@ function drawFlavors(flavor) {
             });
     });
 }
-
-$('body').mousemove(function() {
-    drawDistilleries();
-    console.log("Drew distilleries");
-});
