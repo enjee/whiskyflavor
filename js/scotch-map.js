@@ -11,7 +11,7 @@ window.onresize = function (event) {
  * Declaration of flavor colors      *
  *************************************/
 const COLORS = {
-    Body: "rgba(0, 0, 102, 0.5)",
+    Body: "rgba(255, 204, 204, 0.5)",
     Sweetness: "rgba(102, 102, 0, 0.5)",
     Smoky: "rgba(102, 102, 153, 0.5)",
     Medicinal: "rgba(255, 0, 0, 0.5)",
