@@ -1,9 +1,10 @@
 polygon {
-    fill: #626262
+    fill: #735850
 }
 
 .tt {
-    color: black;
+    color: white;
+    text-shadow: 1px 1px 1px black;
     opacity: 1;
 }
 
@@ -27,6 +28,10 @@ polygon {
     opacity: 0;
 }
 
+.container {
+    color: #735850;
+}
+
 /* Create a custom checkbox */
 .checkmark {
     position: absolute;
@@ -37,14 +42,10 @@ polygon {
     background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: #02BEC4;
+    background-color: #A0CA79;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -79,7 +80,7 @@ main {
 }
 
 body {
-    background: #eeeeee;
+    background: #BFB7B4;
     overflow-x: hidden;
 }
 
@@ -92,7 +93,7 @@ body {
     left:0;
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(45deg, #5178c1, #4667a6 4px, #3e629a 16px, #334c7a 20px);
+    background: repeating-linear-gradient(75deg, #c4bcb9, #bfb7b4 4px, #bdb5b2 16px, #b7afac 30px);
 }
 
 circle {
@@ -106,36 +107,36 @@ circle {
 .blog-masthead {
     border: 0;
     background: #ffffff !important; /* Old browsers */
-    background: -moz-linear-gradient(top, #636363 0%, #515151 100%) !important; /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #636363 0%, #515151 100%) !important; /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #636363 0%, #515151 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#636363', endColorstr='#515151', GradientType=0); /* IE6-9 */
+    background: -moz-linear-gradient(top, #545c80 0%, #434c73 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #545c80 0%, #434c73 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #545c80 0%, #434c73 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#545c80', endColorstr='#434c73', GradientType=0); /* IE6-9 */
     color: white !important;
-    text-shadow: 4px 4px 4px #515151;
+    text-shadow: 4px 4px 4px #BFB7B4;
 }
 
 .blog-header {
-    box-shadow: 0 8px 3px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.22);
     background: #ffffff !important; /* Old browsers */
-    background: -moz-linear-gradient(top, #515151 0%, #393939 100%) !important; /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #515151 0%, #393939 100%) !important; /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #515151 0%, #393939 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#515151', endColorstr='#393939', GradientType=0); /* IE6-9 */
+    background: -moz-linear-gradient(top, #434c73 0%, #41496A 100%) !important; /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #434c73 0%, #41496A 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #434c73 0%, #41496A 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#434c73', endColorstr='#41496A', GradientType=0); /* IE6-9 */
     color: white !important;
-    text-shadow: 4px 4px 4px #515151;
+    text-shadow: 0.5px 0.5px 0.5px #BFB7B4;
     cursor: default !important;
 }
 
 body > header > div.blog-masthead > div > nav > a {
     background-color: rgba(0, 0, 0, 0);
     color: white !important;
-    text-shadow: 4px 4px 4px #515151;
+    text-shadow: 4px 4px 4px #41496A;
 }
 
 body > header > div.blog-masthead > div > nav > a:hover {
     background-color: rgba(255, 255, 255, 0.4);
     color: white !important;
-    text-shadow: 4px 4px 4px #515151;
+    text-shadow: 4px 4px 4px #41496A;
 }
 
 .container {

@@ -110,7 +110,7 @@ function drawMap() {
             .attr("stroke", "black")
             .attr("stroke-width", 2)
             .on('mouseenter', function (d, i) {
-                d3.select(this).style('fill', "#00b300");
+                d3.select(this).style('fill', "#A0CA79");
                 tooltip.style("visibility", "visible");
                 tooltip.text(d.name);
             })
@@ -118,7 +118,7 @@ function drawMap() {
                 tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
             })
             .on('mouseleave', function (d, i) {
-                d3.select(this).style('fill', "#626262");
+                d3.select(this).style('fill', "#735850");
                 tooltip.style("visibility", "hidden");
             });
     });
@@ -136,7 +136,7 @@ function drawDistilleries() {
             .attr('r', 5)
             .attr("stroke", "black")
             .attr("stroke-width", 2)
-            .attr('fill', '#804000')
+            .attr('fill', '#735850')
             .attr('z-index', '5000')
             .attr('cx', function (d) {
                 return x(d.x);
@@ -145,7 +145,7 @@ function drawDistilleries() {
                 return y(d.y - 50);
             })
             .on('mouseenter', function (d, i) {
-                d3.select(this).style('fill', "#00b300");
+                d3.select(this).style('fill', "#735850");
                 tooltip.style("visibility", "visible");
                 tooltip.text(d.Distillery);
             })
@@ -153,7 +153,7 @@ function drawDistilleries() {
                 tooltip.style("top", (event.pageY - 10) + "px").style("left", (event.pageX + 10) + "px");
             })
             .on('mouseleave', function (d, i) {
-                d3.select(this).style('fill', "#626262");
+                d3.select(this).style('fill', "#735850");
                 tooltip.style("visibility", "hidden");
             });
     });
