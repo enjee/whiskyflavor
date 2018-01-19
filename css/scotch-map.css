@@ -24,7 +24,6 @@
 }
 
 .container {
-    pagging: 0;
     margin: 0;
 }
 
@@ -70,6 +69,19 @@
 
 .checkboxes {
     padding-top: 50px;
+}
+
+.top-3-container {
+    display: none;
+}
+
+.top-3-header {
+    margin-top: 50px;
+    font-size: 2em;
+}
+
+.top-3-item {
+
 }
 
 /*************
@@ -137,8 +149,13 @@ label.container {
     text-decoration: none;
 }
 
+.dark-hover:hover {
+    color: #41496A !important;
+}
+
 .aboot {
     cursor: default !important;
+    font-size: 0.8em;
 }
 
 .img-fluid {

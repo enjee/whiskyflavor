@@ -1,4 +1,3 @@
-
 // (re)draw everything when page is loaded or resized
 $(document).ready(function () {
     drawEverything();
@@ -41,9 +40,31 @@ $('input[type=checkbox]').click(function () {
         $(this).parent().css("background", "none");
         var index = activeFlavors.indexOf(id);
         activeFlavors.splice(index, 1);
+
     }
     drawEverything();
+    showTopThree(id);
 });
+
+// Show the top 3 of flavors
+function showTopThree(id) {
+    $(".top-3-header").html("Top 5 " + id);
+    $(".top-3-item-container").html("");
+    html_string = "";
+    for (index in flavor_top[id]) {
+        distillery_info = flavor_top[id][index];
+        distillery_score = distillery_info[0];
+        distillery_name = distillery_info[1];
+        html_string += "\n" +
+            "<div class=\"row\">\n" +
+            "    <div class=\"col-sm-8 top-3-item\">" + (parseInt(index) + 1) + ". " + distillery_name + "</div>\n" +
+            "    <div class=\"col-sm-4 top-3-item-value\">" + distillery_score + "/5</div>\n" +
+            "</div>"
+
+    }
+    $(".top-3-item-container").html(html_string);
+    $(".top-3-container").show();
+}
 
 
 /*************************************************
@@ -55,6 +76,7 @@ var margin;
 var svg;
 var x;
 var y;
+var flavor_top;
 var tooltip = d3.select("body")
     .append("div")
     .style("position", "absolute")
@@ -106,7 +128,7 @@ function drawMap() {
             .enter().append("polygon")
             .attr("points", function (d) {
                 return d.points.map(function (d) {
-                    return [x(d.x *0.7 - 120), y(d.y * 0.9 - 50)].join(",");
+                    return [x(d.x * 0.7 - 120), y(d.y * 0.9 - 50)].join(",");
                 }).join(" ");
             })
             .attr("stroke", "black")
@@ -130,6 +152,38 @@ function drawMap() {
 // Read in distilleries
 function drawDistilleries() {
     d3.csv("data/whiskydata.csv", function (data) {
+
+        // Save top3 of each flavor one time
+        if (flavor_top == undefined) {
+            flavor_top = {};
+
+            function process_flavor_data(flavor) {
+                flavor_top[flavor] = []
+                for (index in data) {
+                    distillery_info = data[index];
+                    distillery_name = distillery_info["Distillery"];
+                    distillery_score = distillery_info[flavor];
+                    flavor_top[flavor].push([distillery_score, distillery_name]);
+                }
+                flavor_top[flavor] = flavor_top[flavor].sort(); // Sort flavor strengths
+                flavor_top[flavor] = flavor_top[flavor].reverse().slice(0, 5); // get top 5
+
+            }
+
+            process_flavor_data("Body");
+            process_flavor_data("Sweetness");
+            process_flavor_data("Smoky");
+            process_flavor_data("Medicinal");
+            process_flavor_data("Tobacco");
+            process_flavor_data("Honey");
+            process_flavor_data("Spicy");
+            process_flavor_data("Winey");
+            process_flavor_data("Nutty");
+            process_flavor_data("Malty");
+            process_flavor_data("Fruity");
+            console.info(flavor_top)
+
+        }
         svg.selectAll("circle")
             .data(data)
             .enter()
@@ -174,13 +228,13 @@ function drawFlavors(flavor) {
             .append('circle')
             .attr('z-index', '5000')
             .attr('class', flavor)
-            .attr('r', function(d) {
+            .attr('r', function (d) {
                 return 10 * eval("d." + flavor);
             })
             .attr("stroke", "black")
             .attr("stroke-width", 2)
             .attr('fill', color)
-            .attr('fill-opacity', function(d) {
+            .attr('fill-opacity', function (d) {
                 return 0.4 * eval("d." + flavor);
             })
             .attr('cx', function (d) {
