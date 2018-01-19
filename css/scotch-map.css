@@ -122,6 +122,7 @@ polygon {
 * Background, body and main styles *
 ************************************/
 body {
+    font-family: "Franklin Gothic Demi";
     background: #BFB7B4;
     overflow-x: hidden;
 }
@@ -144,7 +145,6 @@ label.container {
 
 .centroid {
     color: #735850 !important;
-    text-shadow: 0.1px 0.1px 0.1px #41496A;
 }
 
 
