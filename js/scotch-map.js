@@ -1,6 +1,11 @@
 // (re)draw everything when page is loaded or resized
 $(document).ready(function () {
     drawEverything();
+    if (localStorage.getItem("showMap")) {
+        $(".welcome").hide();
+    } else {
+        $(".hidden").hide();
+    }
 });
 
 window.onresize = function (event) {
@@ -56,7 +61,7 @@ function showTopThree(id) {
         distillery_score = distillery_info[0];
         distillery_name = distillery_info[1];
         html_string += "\n" +
-            "<div class=\"row\" onmouseenter=\"highlightDistillery('" + distillery_name.replace(/ /g,'') + "')\" onmouseleave=\"unHighlightDistillery('" + distillery_name.replace(/ /g,'') + "')\">" +
+            "<div class=\"row\" onmouseenter=\"highlightDistillery('" + distillery_name.replace(/ /g, '') + "')\" onmouseleave=\"unHighlightDistillery('" + distillery_name.replace(/ /g, '') + "')\">" +
             "    <div class=\"col-sm-8 top-3-item\">" + (parseInt(index) + 1) + ". " + distillery_name + "</div>\n" +
             "    <div class=\"col-sm-4 top-3-item-value\">" + distillery_score + "/5</div>\n" +
             "</div>"
@@ -67,13 +72,11 @@ function showTopThree(id) {
 }
 
 function highlightDistillery(distillery_name) {
-    console.log(distillery_name);
     $("#" + distillery_name).css("fill", "#A0CA79");
     $("#" + distillery_name).css("r", "10");
 }
 
 function unHighlightDistillery(distillery_name) {
-    console.log(distillery_name + " <<<<<<<<<<");
     $("#" + distillery_name).css("fill", "#735850");
     $("#" + distillery_name).css("r", "5");
 }
@@ -165,35 +168,9 @@ function drawMap() {
 function drawDistilleries() {
     d3.csv("data/whiskydata.csv", function (data) {
 
-        // Save top3 of each flavor one time
+        // Save top5 of each flavor one time
         if (flavor_top == undefined) {
-            flavor_top = {};
-
-            function process_flavor_data(flavor) {
-                flavor_top[flavor] = []
-                for (index in data) {
-                    distillery_info = data[index];
-                    distillery_name = distillery_info["Distillery"];
-                    distillery_score = distillery_info[flavor];
-                    flavor_top[flavor].push([distillery_score, distillery_name]);
-                }
-                flavor_top[flavor] = flavor_top[flavor].sort(); // Sort flavor strengths
-                flavor_top[flavor] = flavor_top[flavor].reverse().slice(0, 5); // get top 5
-
-            }
-
-            process_flavor_data("Body");
-            process_flavor_data("Sweetness");
-            process_flavor_data("Smoky");
-            process_flavor_data("Medicinal");
-            process_flavor_data("Tobacco");
-            process_flavor_data("Honey");
-            process_flavor_data("Spicy");
-            process_flavor_data("Winey");
-            process_flavor_data("Nutty");
-            process_flavor_data("Malty");
-            process_flavor_data("Fruity");
-
+            saveFlavorTop(data);
         }
         svg.selectAll("circle")
             .data(data)
@@ -206,7 +183,7 @@ function drawDistilleries() {
             .attr('fill', '#735850')
             .attr('z-index', '5000')
             .attr('id', function (d) {
-                return d["Distillery"].replace(/ /g,'');
+                return d["Distillery"].replace(/ /g, '');
             })
             .attr('cx', function (d) {
                 return x(d.x);
@@ -227,6 +204,36 @@ function drawDistilleries() {
                 tooltip.style("visibility", "hidden");
             });
     });
+}
+
+// Save the top5 of each flavor in a JS map.
+function saveFlavorTop(data) {
+    flavor_top = {};
+
+    function process_flavor_data(flavor) {
+        flavor_top[flavor] = [];
+        for (index in data) {
+            distillery_info = data[index];
+            distillery_name = distillery_info["Distillery"];
+            distillery_score = distillery_info[flavor];
+            flavor_top[flavor].push([distillery_score, distillery_name]);
+        }
+        flavor_top[flavor] = flavor_top[flavor].sort(); // Sort flavor strengths
+        flavor_top[flavor] = flavor_top[flavor].reverse().slice(0, 5); // get top 5
+
+    }
+
+    process_flavor_data("Body");
+    process_flavor_data("Sweetness");
+    process_flavor_data("Smoky");
+    process_flavor_data("Medicinal");
+    process_flavor_data("Tobacco");
+    process_flavor_data("Honey");
+    process_flavor_data("Spicy");
+    process_flavor_data("Winey");
+    process_flavor_data("Nutty");
+    process_flavor_data("Malty");
+    process_flavor_data("Fruity");
 }
 
 /***********************************
@@ -268,4 +275,14 @@ function drawFlavors(flavor) {
                 tooltip.style("visibility", "hidden");
             });
     });
+}
+
+function showMap() {
+    localStorage.setItem("showMap", true);
+    $(".welcome").hide();
+    $(".hidden").show(1000);
+}
+
+function resetShowMap() {
+    localStorage.removeItem("showMap");
 }

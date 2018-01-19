@@ -146,15 +146,6 @@ label.container {
     text-shadow: 0.1px 0.1px 0.1px #41496A;
 }
 
-.card-body, .centroid a {
-    color: white;
-    text-decoration: none;
-}
-
-.card-body:hover, .centroid a:hover {
-    color: #A0CA79;
-    text-decoration: none;
-}
 
 .dark-hover:hover {
     color: #41496A !important;
@@ -223,12 +214,23 @@ body > header > div.blog-masthead > div > nav > a:hover {
     cursor: default !important;
 }
 
-.card-body a {
-    color: white;
+.card a {
+    color: #c4bcb9;
     text-decoration: none;
 }
 
-.card-body a:hover {
-    color: #A0CA79;
+.card a:hover {
+    color: #41496A;
     text-decoration: none;
+    background-color: #A0CA79;
+}
+
+.welcome-text {
+    background-color: #c4bcb9;
+    color: #41496A;
+    border-bottom: #41496A solid 1px;
+}
+
+.space-row {
+    padding-top: 50px;
 }

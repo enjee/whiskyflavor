@@ -40,11 +40,29 @@
 </header>
 
 <main role="main" class="container">
-    <div class="row">
+    <div class="row welcome">
+        <div class="col-sm-6 offset-3 text-center">
+            <div class="card">
+                <div class="welcome-text">
+                    <p>Did you ever try Scotch whisky?</p>
+                    <p>If you did, you might know that this populair drink can be very complex.</p>
+                    <p>Some people like Scotch soft and sweet, other love the smoky medicinal flavors.</p>
+                    <p>In this visualization you will find out what part of Scotland you should visit on a trip, which base flavors are available in Scotch and you might learn some other things.</p>
+                    <p>Let's get this map ready!</p>
+                </div>
+                <!--Card content-->
+                <a href="#" onclick="showMap();">
+                    <div class="card-body text-center">
+                        Show me the map!
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row hidden">
         <div class="col-sm-6 offset-2">
-
             <div id="scmap"></div>
-
         </div>
         <div class="col-sm-4 checkboxes">
 
