@@ -53,8 +53,8 @@ $('input[type=checkbox]').click(function () {
 
 // Show the top 3 of flavors
 function showTopThree(id) {
-    $(".top-3-header").html("Top 5 " + id);
-    $(".top-3-item-container").html("");
+    $(".top-5-header").html("Top 5 " + id);
+    $(".top-5-item-container").html("");
     html_string = "";
     for (index in flavor_top[id]) {
         distillery_info = flavor_top[id][index];
@@ -62,18 +62,18 @@ function showTopThree(id) {
         distillery_name = distillery_info[1];
         html_string += "\n" +
             "<div class=\"row\" onmouseenter=\"highlightDistillery('" + distillery_name.replace(/ /g, '') + "')\" onmouseleave=\"unHighlightDistillery('" + distillery_name.replace(/ /g, '') + "')\">" +
-            "    <div class=\"col-sm-8 top-3-item\">" + (parseInt(index) + 1) + ". " + distillery_name + "</div>\n" +
-            "    <div class=\"col-sm-4 top-3-item-value\">" + distillery_score + "/5</div>\n" +
+            "    <div class=\"col-sm-8 top-5-item\">" + (parseInt(index) + 1) + ". " + distillery_name + "</div>\n" +
+            "    <div class=\"col-sm-4 top-5-item-value\">" + distillery_score + "/5</div>\n" +
             "</div>"
 
     }
-    $(".top-3-item-container").html(html_string);
-    $(".top-3-container").show();
+    $(".top-5-item-container").html(html_string);
+    $(".top-5-container").show();
 }
 
 function highlightDistillery(distillery_name) {
     $("#" + distillery_name).css("fill", "#A0CA79");
-    $("#" + distillery_name).css("r", "10");
+    $("#" + distillery_name).css("r", "15");
 }
 
 function unHighlightDistillery(distillery_name) {
