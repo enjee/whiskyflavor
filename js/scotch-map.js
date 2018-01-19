@@ -56,7 +56,7 @@ function showTopThree(id) {
         distillery_score = distillery_info[0];
         distillery_name = distillery_info[1];
         html_string += "\n" +
-            "<div class=\"row\">\n" +
+            "<div class=\"row\" onmouseenter=\"highlightDistillery('" + distillery_name.replace(/ /g,'') + "')\" onmouseleave=\"unHighlightDistillery('" + distillery_name.replace(/ /g,'') + "')\">" +
             "    <div class=\"col-sm-8 top-3-item\">" + (parseInt(index) + 1) + ". " + distillery_name + "</div>\n" +
             "    <div class=\"col-sm-4 top-3-item-value\">" + distillery_score + "/5</div>\n" +
             "</div>"
@@ -64,6 +64,18 @@ function showTopThree(id) {
     }
     $(".top-3-item-container").html(html_string);
     $(".top-3-container").show();
+}
+
+function highlightDistillery(distillery_name) {
+    console.log(distillery_name);
+    $("#" + distillery_name).css("fill", "#A0CA79");
+    $("#" + distillery_name).css("r", "10");
+}
+
+function unHighlightDistillery(distillery_name) {
+    console.log(distillery_name + " <<<<<<<<<<");
+    $("#" + distillery_name).css("fill", "#735850");
+    $("#" + distillery_name).css("r", "5");
 }
 
 
@@ -181,7 +193,6 @@ function drawDistilleries() {
             process_flavor_data("Nutty");
             process_flavor_data("Malty");
             process_flavor_data("Fruity");
-            console.info(flavor_top)
 
         }
         svg.selectAll("circle")
@@ -194,6 +205,9 @@ function drawDistilleries() {
             .attr("stroke-width", 2)
             .attr('fill', '#735850')
             .attr('z-index', '5000')
+            .attr('id', function (d) {
+                return d["Distillery"].replace(/ /g,'');
+            })
             .attr('cx', function (d) {
                 return x(d.x);
             })

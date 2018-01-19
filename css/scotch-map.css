@@ -88,10 +88,6 @@
 * SVG Markup *
 **************/
 
-/* The drawn land on the map */
-polygon {
-    fill: #735850
-}
 
 /* Tooltip when hovering land or distilleries */
 .tt {
@@ -104,11 +100,21 @@ polygon {
 circle {
     mix-blend-mode: screen;
 }
+circle:hover {
+    fill: #A0CA79 !important;
+}
 
 main {
     padding: 0 !important;
     margin: 0 !important;
     max-width: 100% !important;
+    cursor: default !important;
+}
+
+/* The drawn land on the map */
+polygon {
+    fill: #735850;
+    cursor: pointer !important;
 }
 
 /***********************************
@@ -136,7 +142,8 @@ label.container {
 }
 
 .centroid {
-    color: black !important;
+    color: #735850 !important;
+    text-shadow: 0.1px 0.1px 0.1px #41496A;
 }
 
 .card-body, .centroid a {
